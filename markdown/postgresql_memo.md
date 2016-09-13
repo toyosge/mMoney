@@ -34,8 +34,14 @@ $ psql -d postgres
 ```
 create table daily_money_report(
   user_id VARCHAR(256) NOT NULL,
-  day_cache VARCHAR(256) NOT NULL
+  day_cache VARCHAR(256) NOT NULL,
+  published_on DATE NOT NULL
 );
+```
+
+```
+insert into daily_money_report ( user_id,day_cache, published_on) values ('massan','340000',NOW())
+
 ```
 
 
