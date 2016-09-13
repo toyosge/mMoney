@@ -12,7 +12,7 @@ console.log("2");
 var Config = require('./config.js');
 console.log("3");
 
-var Service = require('./execute.js');
+//var Service = require('./execute.js');
 
 
 console.log("hoge");
@@ -34,7 +34,7 @@ casper.wait(5000);
 casper.then(function () {
     var targetText = this.getElementInfo("#vp_alcor_view_Label_7").text;
     console.log("your pay money is: " + targetText + "円です。今月もガンバ！！");
-    Service.executeQuery();
+//    Service.executeQuery();
 //    Repo.insertCreditEstimate("massan",targetText);
 });
 

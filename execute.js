@@ -20,14 +20,9 @@ var repo = require('./app/repository/daily-money-report.js');
 
 console.log("02");
 
-exports.executeQuery = function () {
+//exports.executeQuery = function () {
     console.log("03");
 
     console.log("始まります");
-    repo.insertCreditEstimate("massan", "20000");
-};
-
-//exports.hoge = function () {
-//    repo.insertCreditEstimate("massan", "20000");
+    repo.insertCreditEstimate("mmmmmmm", "20000");
 //};
-//repo.findByUserId("massan");
