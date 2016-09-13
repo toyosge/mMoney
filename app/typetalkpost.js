@@ -4,10 +4,11 @@
 
 var https = require('https');
 var querystring = require('querystring');
+var Config = require("../config.js");
 
 var options = {
     hostname: 'typetalk.in',
-    path: '/api/v1/topics/16738?typetalkToken=wIxFtsQHo5osA6WJLlzKgqJvlXpaz8nsOITI73F7wuSRiw516d99l4a7aaVpToKc',
+    path: '/api/v1/topics/' + Config.TypetalkConfig.topicId + '?typetalkToken=' + Config.TypetalkConfig.token,
     method: 'POST',
     headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
