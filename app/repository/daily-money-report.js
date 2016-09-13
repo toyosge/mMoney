@@ -39,6 +39,9 @@ exports.findByUserId = function (userId) {
 
 // insert into daily_money_report (user_id,day_cache, published_on) values ('massan','340000',NOW())
 exports.insertCreditEstimate = function (userId, dayCache) {
+
+    console.log("やっほーーー");
+
     var date = "NOW()";
     var queryPrefix = "INSERT INTO daily_money_report (user_id, day_cache, published_on) VALUES (";
     var queryExecute = queryPrefix + surroundSingleQuote(userId) + "," + dayCache + "," + date +  ")";
