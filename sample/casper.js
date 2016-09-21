@@ -1,6 +1,6 @@
 /**
  * When you login to need ssl, you should use following command
- * casperjs --ssl-protocol=tlsv1 app.js
+ * casperjs --ssl-protocol=tlsv1 casper.js
  *
  */
 
