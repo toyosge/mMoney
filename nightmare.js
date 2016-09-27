@@ -1,7 +1,7 @@
 var Nightmare = require('nightmare');
 var nightmare = Nightmare({'show': false});
 var Config = require('./config.js');
-//var service = require('./app/service/execute.js');
+var service = require('./app/service/execute.js');
 
 nightmare
     .goto(Config.AccessConfig.targetUrl)
@@ -17,6 +17,7 @@ nightmare
     .then(function (result) {
         console.log("ここか....");
         console.log(result);
+        service.addedPayMoney("massan", result);
     })
     .catch(function (error) {
         console.error('Search failed:', error);
