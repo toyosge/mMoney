@@ -1,10 +1,12 @@
 /**
- * Created by masahirayamamoto on 2016/09/04.
+ *
  */
 
 var https = require('https');
 var querystring = require('querystring');
 var Config = require("../config.js");
+
+var service = require("./service/execute.js");
 
 var options = {
     hostname: 'typetalk.in',
@@ -20,6 +22,13 @@ var req = https.request(options, function(res) {
         console.log('BODY: ' + chunk);
     });
 });
-req.write(querystring.stringify({'message': 'Hello, Typetalk!'}));
+
+
+// 外だしして、コールバック地獄にしてやる。
+// sqlはしってから、postするように変えたい
+var money = service.getPayMoney("massan");
+console.log("this:"+ money);
+
+req.write(querystring.stringify({'message': 'This month cost is ' + money +  ' yen' }));
 req.end();
 

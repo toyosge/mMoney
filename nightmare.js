@@ -15,7 +15,6 @@ nightmare
     })
     .end()
     .then(function (result) {
-        console.log("ここか....");
         console.log(result);
         service.addedPayMoney("massan", result);
     })

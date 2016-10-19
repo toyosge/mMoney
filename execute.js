@@ -13,4 +13,5 @@ var __ = require('underscore');
 //}
 
 
-service.addedPayMoney("massan", __.random(0, 100));
+//service.addedPayMoney("massan", __.random(0, 100));
+service.getPayMoney("massan");

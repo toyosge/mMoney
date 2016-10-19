@@ -25,9 +25,10 @@ exports.selectFromTable = function () {
 exports.findByUserId = function (userId) {
     pool.connect(function (err, client, release) {
         if (err) console.log(err);
-        var query = client.query('SELECT day_cache from daily_money_report where user_id=' + surroundSingleQuote(userId) + 'LIMIT 1');
+        var query = client.query('SELECT day_cache from daily_money_report where user_id=' + surroundSingleQuote(userId) + 'ORDER BY published_on DESC LIMIT 1');
         query.on('row', function (row) {
-            console.log('%d円', row.day_cache);
+            console.log('%s円', row.day_cache);
+            return row.day_cache;
         });
         query.on('end', function (result) {
 //            console.log(result.rowCount + ' rows were received');
