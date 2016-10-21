@@ -1,17 +1,18 @@
+var money;
 var service = require('./app/service/execute.js');
-var __ = require('underscore');
-//var nightmare = require('./nightmare.js');
+var post = require('./app/typetalkpost.js');
 
-//function getNightmare() {
-//    nightmare.getMoneyFromUcho();
-//}
+function taskA() {
+    console.log(money + "on taskA");
+    money = service.getPayMoney("massan");
+}
+function taskB() {
+    console.log(money + "on taskB");
+    post.typetalkPost(money)
+}
 
-//function output(argument) {
-//    console.log(argument);
-//    console.log("とおっていますね");
-//    service.addedPayMoney("massan",argument);
-//}
-
-
-//service.addedPayMoney("massan", __.random(0, 100));
-service.getPayMoney("massan");
+// Promiseが聞いてないくーーーーー
+var promise = Promise.resolve();
+promise
+    .then(taskA)
+    .then(taskB);
