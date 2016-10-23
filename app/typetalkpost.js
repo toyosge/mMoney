@@ -1,12 +1,10 @@
-/**
- *
- */
-
 var https = require('https');
 var querystring = require('querystring');
 var Config = require("../config.js");
 
 exports.typetalkPost = function (postMessage) {
+
+    console.log("postMessage is : " + postMessage);
 
     var options = {
         hostname: 'typetalk.in',
