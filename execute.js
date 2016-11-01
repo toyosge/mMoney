@@ -2,14 +2,16 @@ var service = require('./app/service/execute.js');
 var post = require('./app/typetalkpost.js');
 var Promise = require('promise');
 
-var money;
-var promise = Promise.resolve();
+
+// ばーせんーーーんん https://azu.github.io/promises-book/#introduction
+var promise = new Promise(function (resolve) {
+    resolve(service.getPayMoney("massan"));
+});
+
 promise
-    .then(function(){
-        console.log(money + "on taskA");
-        money = service.getPayMoney("massan");
-    })
-    .then(function(){
-        console.log(money + "on taskB");
-        post.typetalkPost(money)
+    .then(function (value) {
+        console.log(value + "on taskB");
+        post.typetalkPost(value);})
+    .catch(function (error) {
+        console.log(error);
     });

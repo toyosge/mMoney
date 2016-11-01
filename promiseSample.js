@@ -3,9 +3,7 @@ var async = require('async');
 var Promise = require('promise');
 
 
-
 function firstFunc() {
-
     // Promiseオブジェクトを返却する.処理成功時にはresolveが呼ばれる
     return new Promise(function (resolve, reject) {
         setTimeout(function () {
