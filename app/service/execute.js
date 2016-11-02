@@ -7,6 +7,6 @@ exports.addedPayMoney = function (userId, money) {
 
 exports.getPayMoney = function (userId) {
     console.log("これぞ");
-    repo.findByUserId(userId);
+    return repo.findByUserId(userId);
 };
 
