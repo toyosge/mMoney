@@ -17,6 +17,7 @@ nightmare
     .then(function (result) {
         console.log(result);
         service.addedPayMoney("massan", result);
+        console.log("https://wwws.jp-bank.japanpost.jp/credit1/service/point/point.html");
     })
     .catch(function (error) {
         console.error('Search failed:', error);

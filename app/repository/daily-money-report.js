@@ -48,7 +48,7 @@ exports.insertCreditEstimate = function (userId, dayCache) {
     var date = "NOW()";
     var queryPrefix = "INSERT INTO daily_money_report (user_id, day_cache, published_on) VALUES (";
     var queryExecute = queryPrefix + surroundSingleQuote(userId) + "," + surroundSingleQuote(dayCache) + "," + date + ")";
-    console.log(queryExecute);
+//    console.log(queryExecute);
 
     pool.connect(function (err, client, release) {
         if (err) console.log(err);
