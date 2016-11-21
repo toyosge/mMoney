@@ -1,0 +1,38 @@
+{
+  "name": "m3money",
+  "version": "1.0.0",
+  "description": "This is my apps.",
+  "main": "execute.js",
+  "dependencies": {
+    "async": "^2.1.2",
+    "casperjs": "^1.1.3",
+    "express": "^4.14.0",
+    "nightmare": "^2.7.0",
+    "pg": "^6.1.0",
+    "phantomjs": "^2.1.7",
+    "promise": "^7.1.1",
+    "spooky": "^0.2.5",
+    "tiny-jsonrpc": "^2.0.1",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node execute"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toyosge/mMoney.git"
+  },
+  "keywords": [
+    "Promise",
+    "nightmarejs",
+    "express",
+    "postgresql"
+  ],
+  "author": "m3",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toyosge/mMoney/issues"
+  },
+  "homepage": "https://github.com/toyosge/mMoney#readme"
+}
