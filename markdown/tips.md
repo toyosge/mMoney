@@ -14,3 +14,7 @@ http://qiita.com/shopetan/items/58a62a366aac4f5faa20
 
 ## install express
 http://expressjs.com/ja/starter/installing.html
+
+# tmux
+## how to use
+http://kanjuku-tomato.blogspot.jp/2014/02/tmux.html
